@@ -4,14 +4,16 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const car = 40;
+  const DAILY_RATE = 40;
+  const LONG_TERM_DISCOUNT = 50;
+  const SHORT_TERM_DISCOUNT = 20;
 
   if (days >= 7) {
-    return car * days - 50;
+    return DAILY_RATE * days - LONG_TERM_DISCOUNT;
   } else if (days >= 3) {
-    return car * days - 20;
+    return DAILY_RATE * days - SHORT_TERM_DISCOUNT;
   } else {
-    return car * days;
+    return DAILY_RATE * days;
   }
 }
 
